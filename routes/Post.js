@@ -11,7 +11,7 @@ const User = require('../model')
 
 router.post("/add", (req, res) => {
     console.log("add request chal rahi hai");
-    console.log(req.body);
+    console.log(res);
     const user = new User(req.body)
 
     user.save()

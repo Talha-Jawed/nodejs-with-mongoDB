@@ -1,8 +1,8 @@
-const express = require('express')
+const express = require('express');
 const app = express();
-const mongoose = require('./config/DB')
-const cors = require('cors')
-var bodyParser = require('body-parser')
+const mongoose = require('./config/DB');
+const cors = require('cors');
+var bodyParser = require('body-parser');
 
 app.use(express.urlencoded({ extended: true }));
 // app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,9 +31,8 @@ app.use(function (req, res, next) {
 });
 
 
-
-app.use('/', require('./routes/index'))
+app.use('/', require('./routes/index'));
 
 // app.get('/', (req, res) => {
-//    res.send('nabeel')
-// })
+//    res.send('tala')
+// });

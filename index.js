@@ -4,7 +4,7 @@ const mongoose = require('./config/DB');
 const cors = require('cors');
 var bodyParser = require('body-parser');
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(bodyParser.json());
 
@@ -32,8 +32,12 @@ app.use(function (req, res, next) {
 });
 
 
-app.use('/', require('./routes/index'));
+// app.use('/', require('./routes/index'));
+require('./routes/index')(app);
+
 
 // app.get('/', (req, res) => {
 //    res.send('tala')
 // });
+
+module.exports = app;

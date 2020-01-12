@@ -1,8 +1,14 @@
-const express = require('express');
-const route = express.Router();
+// const express = require('express');
+// const route = express.Router();
 
-route.use('/post', require('./Post'));
+// route.use('/post', require('./Post'));
 
-route.use('/get', require('./Get'));
+// route.use('/get', require('./Get'));
 
-module.exports = route;
+// module.exports = route;
+
+
+exports = module.exports = function (app) {
+    require('./Post')(app)
+    require('./Update')(app)
+}

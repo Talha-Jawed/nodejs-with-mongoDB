@@ -3,19 +3,19 @@ exports = module.exports = function (app) {
     const router = express.Router();
     const User = require('../model');
 
-    router.put("/add", (req , res)=>{
-        console.log(res,'-=-=-=');
+    router.put("/add/:id", (req , res)=>{
+        console.log(req.params,'-=-=-=');
         
-        User.update(
-            { _id: "5decbb064ee4f8269c9f14d1" },
+        User.updateMany(
+            { _id: req.params.id },
             {
-                $set:
-                    { name: "ali" , "age": "12456" }
+                $set: req.body
+                    // { "name": req.,"age": "23" ,"date": "123456" }
             },
             (err, result) => {
-                console.log(err, '*/*/*/*', result);
+                console.log(err, '*/*/*/*', req.body);
 
-                res.send(result);
+                res.send(req.body);
             });
     })
 

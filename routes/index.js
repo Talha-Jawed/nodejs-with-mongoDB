@@ -13,4 +13,5 @@ exports = module.exports = function (app) {
     require('./Update')(app)
     require('./Get')(app)
     require('./GetOffset')(app)
+    require('./Login')(app)
 }

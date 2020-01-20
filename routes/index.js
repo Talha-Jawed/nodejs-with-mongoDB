@@ -14,4 +14,5 @@ exports = module.exports = function (app) {
     require('./Get')(app)
     require('./GetOffset')(app)
     require('./Login')(app)
+    require('./SignUp')(app)
 }

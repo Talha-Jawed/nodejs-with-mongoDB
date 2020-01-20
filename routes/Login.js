@@ -7,10 +7,8 @@ exports = module.exports = function (app) {
 
 
     router.post("/Login", async (req, res) => {
-        // console.log("TCL: exports -> req", req.body)
         const { name, email, password } = req.body;
         User.SignUp.findOne({ email, name }, async (err, userdb) => {
-            console.log(userdb, "TCL: exports -> err", err)
             if (userdb) {
                 const isMatch = await bcrypt.compare(password, userdb.password);
                 if (!isMatch) {
@@ -44,14 +42,6 @@ exports = module.exports = function (app) {
             }
 
         }).exec()
-        // .then(success => {
-        //     res.send(success)
-        // })
-        // .catch(e => {
-        //     res.send(500, { message: e.message })
-        // })
-
-
 
     })
 

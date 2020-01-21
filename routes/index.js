@@ -15,4 +15,5 @@ exports = module.exports = function (app) {
     require('./GetOffset')(app)
     require('./Login')(app)
     require('./SignUp')(app)
+    require('./NodeMailer')(app)
 }

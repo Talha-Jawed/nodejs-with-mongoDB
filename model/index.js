@@ -22,13 +22,34 @@ var userSignUp = new mongoose.Schema({
     password: String,
 });
 
+var imageUpload = mongoose.Schema({
+    imageName: {
+        type: String,
+        required: true
+    },
+    cloudImage: {
+        type: String,
+        required: true
+    },
+    imageId: {
+        type: String
+    },
+    // post_date: {
+    // type: Date,
+    // default: Date.now
+    // }
+});
+
+
 const User = mongoose.model('user', userSchema);
 const UserData = mongoose.model('userData', userDataSchema);
 const SignUp = mongoose.model('userSignUp', userSignUp);
+const ImageUpload = mongoose.model('imageUpload', imageUpload);
 
 
 module.exports = {
     User,
     UserData,
-    SignUp
+    SignUp,
+    ImageUpload
 }

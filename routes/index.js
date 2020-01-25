@@ -6,4 +6,5 @@ exports = module.exports = function (app) {
     require('./Login')(app)
     require('./SignUp')(app)
     require('./NodeMailer')(app)
+    require('./Cloudinary')(app)
 };

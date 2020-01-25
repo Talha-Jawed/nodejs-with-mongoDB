@@ -36,7 +36,6 @@ exports = module.exports = function (app) {
                         res.status(200).send(data)
 
                     })
-                // res.send(user)
             } else {
                 res.send('user does not exit')
             }

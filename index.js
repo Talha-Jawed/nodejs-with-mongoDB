@@ -36,8 +36,5 @@ app.use(function (req, res, next) {
 require('./routes/index')(app);
 
 
-// app.get('/', (req, res) => {
-//    res.send('tala')
-// });
 
 module.exports = app;

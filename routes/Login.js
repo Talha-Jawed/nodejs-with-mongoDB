@@ -5,7 +5,6 @@ exports = module.exports = function (app) {
     const jwt = require("jsonwebtoken");
     const User = require('../model');
 
-
     router.post("/Login", async (req, res) => {
         const { name, email, password } = req.body;
         User.SignUp.findOne({ email, name }, async (err, userdb) => {
@@ -39,9 +38,7 @@ exports = module.exports = function (app) {
             } else {
                 res.send('user does not exit')
             }
-
         }).exec()
-
     })
 
     app.use('/Admin', router)

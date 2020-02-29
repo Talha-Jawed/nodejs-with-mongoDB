@@ -31,10 +31,6 @@ app.use(function (req, res, next) {
     next();
 });
 
-
-// app.use('/', require('./routes/index'));
 require('./routes/index')(app);
-
-
 
 module.exports = app;

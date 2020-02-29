@@ -33,11 +33,7 @@ var imageUpload = mongoose.Schema({
     },
     imageId: {
         type: String
-    },
-    // post_date: {
-    // type: Date,
-    // default: Date.now
-    // }
+    }
 });
 
 
